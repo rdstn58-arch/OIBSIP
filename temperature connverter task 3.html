@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Temperature Converter</title>
+
+  <style>
+    body{
+      font-family: Arial;
+      background: linear-gradient(#00c6ff,#0072ff);
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .box{
+      background:white;
+      padding:25px;
+      border-radius:15px;
+      width:300px;
+      box-shadow:0 0 15px rgba(0,0,0,0.3);
+    }
+
+    h2{
+      text-align:center;
+    }
+
+    input,select,button{
+      width:100%;
+      padding:8px;
+      margin-top:10px;
+      border-radius:8px;
+      border:1px solid gray;
+    }
+
+    button{
+      background:#0072ff;
+      color:white;
+      font-weight:bold;
+      border:none;
+    }
+
+    #result{
+      margin-top:15px;
+      font-size:18px;
+      text-align:center;
+      font-weight:bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Temperature Converter</h2>
+
+  <input id="temp" type="number" placeholder="Enter value">
+
+  <select id="type">
+    <option value="CtoF">Celsius ➜ Fahrenheit</option>
+    <option value="FtoC">Fahrenheit ➜ Celsius</option>
+    <option value="CtoK">Celsius ➜ Kelvin</option>
+    <option value="KtoC">Kelvin ➜ Celsius</option>
+  </select>
+
+  <button onclick="convert()">Convert</button>
+
+  <div id="result"></div>
+</div>
+
+<script>
+function convert(){
+
+  let t = parseFloat(document.getElementById("temp").value);
+  let type = document.getElementById("type").value;
+  let res = "";
+
+  if(isNaN(t)){
+    res = "Please enter a valid number!";
+  }
+  else if(type=="CtoF"){
+    res = (t * 9/5 + 32).toFixed(2) + " °F";
+  }
+  else if(type=="FtoC"){
+    res = ((t-32) * 5/9).toFixed(2) + " °C";
+  }
+  else if(type=="CtoK"){
+    res = (t + 273.15).toFixed(2) + " K";
+  }
+  else if(type=="KtoC"){
+    res = (t - 273.15).toFixed(2) + " °C";
+  }
+
+  document.getElementById("result").innerHTML = res;
+}
+</script>
+
+</body>
+</html>

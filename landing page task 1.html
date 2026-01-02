@@ -1,0 +1,158 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Landing Page</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#081b29;
+      color:white;
+    }
+
+    /* Navbar */
+    .navbar{
+      display:flex;
+      justify-content:space-between;
+      padding:18px 50px;
+      background:#0bb389;
+    }
+
+    .navbar h1{
+      font-size:26px;
+    }
+
+    .navbar ul{
+      display:flex;
+      list-style:none;
+      gap:20px;
+    }
+
+    .navbar a{
+      text-decoration:none;
+      color:white;
+      font-weight:bold;
+    }
+
+    /* Hero Section */
+    .hero{
+      height:75vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:10px;
+      background:linear-gradient(120deg,#0bb389,#062c2c);
+    }
+
+    .hero h2{
+      font-size:35px;
+      margin-bottom:10px;
+    }
+
+    .hero p{
+      max-width:600px;
+      line-height:1.5;
+      margin-bottom:20px;
+    }
+
+    .btn{
+      padding:10px 20px;
+      background:#00ffaa;
+      color:black;
+      text-decoration:none;
+      font-weight:bold;
+      border-radius:8px;
+    }
+
+    /* Features Section */
+    .section{
+      padding:30px;
+      max-width:1000px;
+      margin:auto;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:15px;
+    }
+
+    .card{
+      background:#083f3f;
+      padding:15px;
+      border-radius:12px;
+    }
+
+    footer{
+      text-align:center;
+      padding:15px;
+      background:black;
+      margin-top:20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <h1>My Landing Page</h1>
+
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+
+<!-- Hero Section -->
+<div class="hero">
+  <h2>Welcome to My Website</h2>
+  <p>
+    This is a simple landing page created as part of my Oasis Infobyte Internship.
+    It demonstrates the use of HTML and CSS including layout, sections, buttons and styling.
+  </p>
+
+  <a class="btn" href="#">Get Started</a>
+</div>
+
+<!-- Features -->
+<div class="section">
+  <h2>Our Features</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Clean Design</h3>
+      <p>Neat and attractive webpage layout using CSS styling.</p>
+    </div>
+
+    <div class="card">
+      <h3>Responsive Layout</h3>
+      <p>Content adjusts well on mobile and desktop screens.</p>
+    </div>
+
+    <div class="card">
+      <h3>Easy Navigation</h3>
+      <p>Simple navbar allows easy movement within the page.</p>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Renitha | Landing Page</p>
+</footer>
+
+</body>
+</html>
